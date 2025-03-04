@@ -44,9 +44,25 @@ export class HousesController {
     } catch (error) {
       Pop.error('Could Not Create House', error)
     }
+  }
+
+  async deleteHouse(houseId) {
+
+    try {
+
+      const confirmed = await Pop.confirm('You sure you want to delete house?', 'It will be gone forever!', 'Oh, oh I am sure!', 'Nah, keep it forever')
+      if (!confirmed) {
+        return
+      }
+      await HouseService.deleteHouse(houseId)
+    }
+    catch (error) {
+      Pop.error('Can not delete house!')
+    }
 
 
   }
+
 
 
 

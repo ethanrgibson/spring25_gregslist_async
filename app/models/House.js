@@ -1,3 +1,5 @@
+import { AppState } from "../AppState.js"
+
 export class House {
 
   constructor(data) {
@@ -32,6 +34,13 @@ export class House {
           <p>${this.description}</p>
         </div>
       </div>
+      <div class="mb-3">
+        <img src="${this.creator.picture}" alt="${this.creator.name}" class="creator-img">
+        <span>${this.creator.name}</span>
+      </div>
+      <div class="mb-2">
+          <button onclick="app.housesController.deleteHouse('${this.id}')" class="btn btn-outline-danger rounded-pill">Delete</button>
+        </div>
     </div>
     <div class="col-md-5 p-0">
       <img src="${this.imgUrl}" alt="${this.year} ${this.price}"
@@ -41,6 +50,15 @@ export class House {
 
   
   `
+  }
+
+  get deleteButton() {
+    const user = AppState.identity
+    if (user == null)
+      return ''
+
+
+
   }
 
 
