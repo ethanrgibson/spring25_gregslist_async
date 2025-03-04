@@ -11,6 +11,7 @@ main {
 
 label {
   display: block;
+  font-size: 2rem;
 }
 
 input {
