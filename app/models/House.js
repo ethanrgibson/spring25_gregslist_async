@@ -13,8 +13,6 @@ export class House {
     this.creatorId = this.creatorId
     this.creator = data.creator
 
-
-
   }
 
 
