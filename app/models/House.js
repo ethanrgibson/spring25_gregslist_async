@@ -31,7 +31,7 @@ export class House {
           <p>${this.levels} Levels</p>
           <p>${this.bathrooms} Bathrooms</p>
           <p class ="fs-3"> Description:</p> 
-          <p>${this.description}</p>
+          <p>${this.descriptionUndefined}</p>
         </div>
       </div>
       <div class="mb-3">
@@ -65,9 +65,19 @@ export class House {
     <button onclick="app.housesController.deleteHouse('${this.id}')" class="btn btn-outline-danger rounded-pill">Delete</button>
     `
 
-
-
   }
 
+  get descriptionUndefined() {
+
+    if (!this.description) {
+      return 'No Description Provided'
+    }
+
+
+    return `
+<p>${this.description}</p>
+
+`
+  }
 
 }
