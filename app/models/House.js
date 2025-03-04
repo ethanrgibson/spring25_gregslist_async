@@ -25,7 +25,7 @@ export class House {
     <div class="col-md-7">
       <div class="d-flex justify-content-between p-2">
         <div>
-          <p class="fs-2"> ${this.year} </p>
+          <p class="fs-2"> House Built in: ${this.year} </p>
           <p>${this.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</p>
           <p>${this.bedrooms} Bedrooms</p>
           <p>${this.levels} Levels</p>
@@ -39,7 +39,7 @@ export class House {
         <span>${this.creator.name}</span>
       </div>
       <div class="mb-2">
-          <button onclick="app.housesController.deleteHouse('${this.id}')" class="btn btn-outline-danger rounded-pill">Delete</button>
+          ${this.deleteButton}
         </div>
     </div>
     <div class="col-md-5 p-0">
@@ -56,6 +56,14 @@ export class House {
     const user = AppState.identity
     if (user == null)
       return ''
+
+    if (this.creatorId != user.id)
+      return ''
+
+
+    return `
+    <button onclick="app.housesController.deleteHouse('${this.id}')" class="btn btn-outline-danger rounded-pill">Delete</button>
+    `
 
 
 

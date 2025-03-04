@@ -39,7 +39,12 @@
           </div>
 
           <div class="col-md-6">
-            <div class="bg-light shadow rounded p-2">
+            <div id="houseFormPlaceHolder">
+              <p class="fs-1">
+                Please Log-In To Create a House
+              </p>
+            </div>
+            <div id="houseForm" class="bg-light shadow rounded p-2 d-none">
               <form onsubmit="app.housesController.createHouseListing()">
                 <div class="mb-3">
                   <label for="houseYear">Year House Built?</label>

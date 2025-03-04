@@ -7,6 +7,8 @@ export class HousesController {
   constructor() {
 
     AppState.on('houses', this.drawHouses)
+    AppState.on('identity', this.drawHouses)
+    AppState.on('identity', this.drawHouseForm)
     this.getHouses()
 
 
@@ -40,7 +42,8 @@ export class HousesController {
       const form = event.target
       const rawHouseData = getFormData(form)
       await HouseService.createHouse(rawHouseData)
-
+      // @ts-ignore
+      form.reset()
     } catch (error) {
       Pop.error('Could Not Create House', error)
     }
@@ -64,7 +67,13 @@ export class HousesController {
   }
 
 
+  drawHouseForm() {
 
+    document.getElementById('houseFormPlaceHolder').classList.add('d-none')
+    document.getElementById('houseForm').classList.remove('d-none')
+
+
+  }
 
 
 
