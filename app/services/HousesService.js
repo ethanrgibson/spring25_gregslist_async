@@ -12,7 +12,6 @@ class HousesService {
     const house = response.data.map(pojo => new House(pojo))
     console.log('formatted house data', house);
     AppState.houses = house
-
   }
 
 
