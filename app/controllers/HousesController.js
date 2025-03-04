@@ -1,28 +1,27 @@
 import { HouseService } from "../services/HousesService.js";
+import { Pop } from "../utils/Pop.js";
 
 export class HousesController {
   constructor() {
 
-    console.log('Live From Houses Controller');
+
     this.getHouses()
 
 
 
   }
 
-  getHouses() {
-
+  async getHouses() {
     try {
-      HouseService.getHouses()
-
-
+      await HouseService.getHouses()
+      Pop.success("We got houses!")
     } catch (error) {
-
+      Pop.error('Houses not loading!')
     }
-
-
-
   }
+
+
+
 
 
 
