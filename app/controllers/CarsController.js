@@ -8,7 +8,7 @@ export class CarsController {
     AppState.on('cars', this.drawCars)
     AppState.on('identity', this.drawCars)
     AppState.on('identity', this.drawCarForm)
-    console.log('Cars Controller is loaded!');
+    // console.log('Cars Controller is loaded!');
     this.getCars()
   }
 
