@@ -15,6 +15,12 @@ class HousesService {
   }
 
 
+  async createHouse(houseData) {
+    const response = await api.post('api/houses', houseData)
+
+    console.log('house data from service', houseData);
+
+  }
 
 
 

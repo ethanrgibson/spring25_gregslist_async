@@ -40,7 +40,12 @@
 
           <div class="col-md-6">
             <div class="bg-light shadow rounded p-2">
-              <form onsubmit="">
+              <form onsubmit="app.housesController.createHouseListing()">
+                <div class="mb-3">
+                  <label for="houseYear">Year House Built?</label>
+                  <input id="houseYear" name="year" type="number" required maxlength="50"
+                    placeholder="How Old is the Home?">
+                </div>
                 <div class="mb-3">
                   <label for="houseBedrooms">Bedrooms?</label>
                   <input id="houseBedrooms" name="bedrooms" type="number" required maxlength="50"
@@ -70,8 +75,8 @@
                     placeholder="What Does Your House Smell Like?">
                 </div>
                 <div class="d-flex justify-content-between ">
-                  <button class="btn btn-outline-warning shadow">Reset</button>
-                  <button class="btn btn-outline-primary shadow">Submit</button>
+                  <button class="btn btn-outline-warning shadow" type="button">Reset</button>
+                  <button class="btn btn-outline-primary shadow" type="submit">Submit</button>
 
                 </div>
 
