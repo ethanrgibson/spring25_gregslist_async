@@ -24,18 +24,64 @@
 
   <main>
 
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-md-12 p-0">
           <div class="bg-primary text-center fs-1 p-3 text-white">
             Houses
           </div>
-          <div class="container">
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="my-3">
+              <img src="https://f4.bcbits.com/img/a0086800029_10.jpg" alt="Lovely House" class="car-form-img rounded">
+            </div>
+          </div>
 
-            <div class="row justify-content-center my-3">
-              <div id="houseListings" class="col-12">
-                <!-- <div class="row bg-light shadow car-border" style="border-color: coral;"> -->
-                <!-- <div class="col-md-8">
+          <div class="col-md-6">
+            <div class="bg-light shadow rounded p-2">
+              <form onsubmit="">
+                <div class="mb-3">
+                  <label for="houseBedrooms">Bedrooms?</label>
+                  <input id="houseBedrooms" name="bedrooms" type="number" required maxlength="50"
+                    placeholder="How Many Bedrooms?">
+                </div>
+                <div class="mb-3">
+                  <label for="houseBathrooms">Bathrooms?</label>
+                  <input id="houseBathrooms" name="bathrooms" type="number" required maxlength="50"
+                    placeholder="How Many Bathrooms?">
+                </div>
+                <div class="mb-3">
+                  <label for="houseLevels">Levels?</label>
+                  <input id="houseLevels" name="levels" type="number" required maxlength="10"
+                    placeholder="How Many Levels?">
+                </div>
+                <div class="mb-3">
+                  <label for="houseImg">Provide Image URL</label>
+                  <input id="houseImg" name="imgUrl" type="text" maxlength="500" placeholder="URL:">
+                </div>
+                <div class="mb-3">
+                  <label for="housePrice">Listing Price</label>
+                  <input id="housePrice" name="price" type="text" required maxlength="50" placeholder="$45">
+                </div>
+                <div class="mb-3">
+                  <label for="houseDescription">Description of the Home</label>
+                  <input id="houseDescription" name="description" type="text" maxlength="5000"
+                    placeholder="What Does Your House Smell Like?">
+                </div>
+
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center my-3">
+        <div id="houseListings" class="col-12">
+          <!-- <div class="row bg-light shadow car-border" style="border-color: coral;"> -->
+          <!-- <div class="col-md-8">
                     <div class="d-flex justify-content-between p-2">
                       <div>
                         <p class="fs-2"> 1900s Victorian Mansion </p>
@@ -50,13 +96,10 @@
                     <img src="https://f4.bcbits.com/img/a0086800029_10.jpg" alt="Run Down House"
                       class="house-form-img img-fluid">
                   </div> -->
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
-    </div>
+
 
     <div class="container">
       <div class="row">
